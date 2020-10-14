@@ -396,8 +396,8 @@ impl HttpInfo {
 #[allow(missing_debug_implementations)]
 pub struct HttpConnecting<R> {
     #[pin]
-    fut: BoxConnecting,
-    _marker: PhantomData<R>,
+    pub fut: BoxConnecting,
+    pub _marker: PhantomData<R>,
 }
 
 type ConnectResult = Result<TcpStream, ConnectError>;

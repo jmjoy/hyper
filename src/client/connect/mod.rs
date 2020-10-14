@@ -86,7 +86,7 @@ use ::http::Extensions;
 #[cfg(feature = "tcp")]
 pub mod dns;
 #[cfg(feature = "tcp")]
-mod http;
+pub mod http;
 #[cfg(feature = "tcp")]
 pub use self::http::{HttpConnector, HttpInfo};
 pub use self::sealed::Connect;
