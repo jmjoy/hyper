@@ -275,7 +275,8 @@ impl<R> HttpConnector<R>
 where
     R: Resolve,
 {
-    async fn call_async(&mut self, dst: Uri) -> Result<TcpStream, ConnectError> {
+    /// HACK for mock tests.
+    pub async fn call_async(&mut self, dst: Uri) -> Result<TcpStream, ConnectError> {
         trace!(
             "Http::connect; scheme={:?}, host={:?}, port={:?}",
             dst.scheme(),
