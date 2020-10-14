@@ -32,7 +32,7 @@ use std::{fmt, io, vec};
 use tokio::task::JoinHandle;
 use tower_service::Service;
 
-pub(super) use self::sealed::Resolve;
+pub use self::sealed::Resolve;
 
 /// A domain name to resolve into IP addresses.
 #[derive(Clone, Hash, Eq, PartialEq)]
